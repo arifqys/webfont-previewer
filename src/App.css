@@ -17,9 +17,15 @@
 .App-title {
   font-size: 1.5em;
 }
-
-.App-intro {
-  font-size: large;
+table {
+  display: inline-block;
+  margin: 80px 0 40px 0;
+}
+td {
+  padding: 5px 10px;
+}
+td:first-of-type {
+  text-align: left;
 }
 
 @keyframes App-logo-spin {
