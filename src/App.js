@@ -31,7 +31,26 @@ class App extends Component {
           <tbody>
             <tr>
               <td>Font family</td>
-              <td><input placeholder="Input font family" value={ this.state.fFamily } onChange={ this.onInputChangeF }/></td>
+              <td>
+                <select placeholder="Input font family" onChange={ this.onInputChangeF }>
+                  <option value="serif">serif</option>
+                  <option value="arial">arial</option>
+                  <option value="helvetica">helvetica</option>
+                  <option value="times new roman">times new roman</option>
+                  <option value="times">times</option>
+                  <option value="courier new">courier new</option>
+                  <option value="courier">courier</option>
+                  <option value="verdana">verdana</option>
+                  <option value="georgia">georgia</option>
+                  <option value="palatino">palatino</option>
+                  <option value="garamond">garamond</option>
+                  <option value="bookman">bookman</option>
+                  <option value="comic sans ms">comic sans ms</option>
+                  <option value="trebuchet">trebuchet</option>
+                  <option value="arial black">arial black</option>
+                  <option value="impact">impact</option>
+                </select>
+              </td>
             </tr>
             <tr>
               <td>Font size</td>
