@@ -8,7 +8,8 @@ class App extends Component {
     this.state = {
       fFamily: "serif",
       fSize: "18",
-      fColor: "black"
+      fColor: "black",
+      fWeight: "normal"
     }
   }
   onInputChangeF = e => {
@@ -19,6 +20,9 @@ class App extends Component {
   }
   onInputChangeC = e => {
     this.setState({fColor: e.target.value});
+  }
+  onInputChangeW = e => {
+    this.setState({fWeight: e.target.value});
   }
   render() {
     return (
@@ -60,12 +64,22 @@ class App extends Component {
               <td>Font color</td>
               <td><input placeholder="Input font color" value={ this.state.fColor } onChange={ this.onInputChangeC }/></td>
             </tr>
+            <tr>
+              <td>Font weight</td>
+              <td>
+                <select placeholder="Input font weight" onChange={ this.onInputChangeW }>
+                  <option value="normal">normal</option>
+                  <option value="bold">bold</option>
+                </select>
+              </td>
+            </tr>
           </tbody>
         </table>
         <p style={{
           fontFamily: this.state.fFamily,
           fontSize: this.state.fSize+"px",
           color: this.state.fColor,
+          fontWeight: this.state.fWeight
         }}>
           This text {this.state.fFamily} {this.state.fSize}px {this.state.fColor}
         </p>
